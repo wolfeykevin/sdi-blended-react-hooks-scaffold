@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  
+}
+
+.landing h1 {
+  margin-left: 3rem;
 }
 
 .App-logo {
@@ -21,7 +25,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 25px rgb(82, 63, 133), 0 0 5px rgb(118, 118, 255);
 }
 
 .App-link {
@@ -35,4 +39,122 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.pokemon-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
+  box-shadow: "3px 3px 3px black";
+  text-shadow: 1px 1px 2px rgb(139, 139, 139), 0 0 25px rgb(82, 63, 133), 0 0 5px rgb(118, 118, 255);
+  background-color: #282c34;
+  text-align: center;
+}
+
+.pokemon-list > li {
+  background-color: rgba(199, 199, 199, 0.9);
+  margin: 8px;
+  padding: 4vw;
+  border-width: 2px;
+  font-weight: 700;
+  border-radius: 24px;
+  text-shadow: 1px 1px 2px rgb(134, 134, 134), 0 0 25px rgb(82, 63, 133), 0 0 5px rgb(118, 118, 255);
+}
+
+.pokemon-list > li > p {
+  text-transform: capitalize;
+}
+
+.pokemon-list > li:hover {
+  cursor: pointer;
+}
+
+.pokemon-details {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  color: white;
+}
+
+.pokemon-details button {
+  margin: 1rem;
+  background-color: #42454c;
+  color: #fff;
+  border-radius: 16px;
+  border: none;
+  font-weight: 700;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 4px #fff;
+  transition: all ease 400ms;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.profileimg {
+  padding: 3rem;
+  margin: 1rem;
+  background-color: #42454c;
+  border-radius: 24px;
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moves {
+  padding: 2rem;
+  margin-top: -2rem;
+}
+
+.moves-list{
+  display: flex;
+
+  flex-flow: column wrap;
+  height: 35rem;
+  box-shadow: "3px 3px 3px black";
+  text-shadow: 1px 1px 2px rgb(139, 139, 139), 0 0 25px rgb(82, 63, 133), 0 0 5px rgb(118, 118, 255);
+  background-color: #282c34;
+}
+.moves-list > li{
+  background-color: rgba(199, 199, 199, 0);
+  /* padding: 4vw; */
+  border-width: 2px;
+  font-weight: 700;
+  border-radius: 24px;
+  text-shadow: 1px 1px 2px rgb(134, 134, 134), 0 0 25px rgb(82, 63, 133), 0 0 5px rgb(118, 118, 255);
+
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #282c34;
+}
+
+.spinner {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  animation: spin 1400ms linear infinite;
+}
+
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
 }
